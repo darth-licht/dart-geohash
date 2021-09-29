@@ -139,7 +139,7 @@ class Geohash {
         in geohash.codeUnits.map((r) => new String.fromCharCode(r))) {
       int thisSequence;
       try {
-        thisSequence = _base32CharToNumber[character];
+        thisSequence = _base32CharToNumber[character]!;
       } catch (error) {
         throw new ArgumentError('$geohash was not a geohash string');
       }
